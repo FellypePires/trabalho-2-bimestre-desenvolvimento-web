@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10221f">
+    <title>Trabalho do 2º Bimestre | Desenvolvimento Web</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <div class="topo-conteudo">
+            <p class="identificacao">FUNDAMENTOS DE PROGRAMAÇÃO WEB · 5º PERÍODO</p>
+            <h1>Trabalho do 2º Bimestre</h1>
+            <p class="introducao">Oito exercícios práticos com HTML, CSS e JavaScript.</p>
+            <a class="atalho" href="#exercicios">Ver exercícios <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="marca" aria-hidden="true"><span>08</span><small>exercícios</small></div>
+    </header>
+
+    <main id="exercicios">
+        <div class="secao-titulo">
+            <div><p class="sobretitulo">LISTA DE ATIVIDADES</p><h2>Exercícios</h2></div>
+            <p class="nota">Preencha os campos e clique em calcular.</p>
+        </div>
+
+        <div class="grade">
+            <section class="cartao">
+                <div class="cartao-topo"><span class="numero">01</span><span class="categoria">GEOMETRIA</span></div>
+                <h3>Encontre o triângulo</h3>
+                <p class="descricao">Informe os três lados para verificar se formam um triângulo e descobrir sua classificação.</p>
+                <form id="form1"><div class="campos tres-colunas"><label>Lado X<input name="x" type="number" min="0.01" step="any" required></label><label>Lado Y<input name="y" type="number" min="0.01" step="any" required></label><label>Lado Z<input name="z" type="number" min="0.01" step="any" required></label></div><button type="submit">Verificar lados</button></form>
+                <output class="resultado" aria-live="polite" hidden></output>
+            </section>
+
+            <section class="cartao">
+                <div class="cartao-topo"><span class="numero">02</span><span class="categoria">SAÚDE</span></div>
+                <h3>Calculadora de IMC</h3>
+                <p class="descricao">Informe o peso em quilogramas e a altura em metros.</p>
+                <form id="form2"><div class="campos"><label>Peso (kg)<input name="peso" type="number" min="0.1" step="any" required></label><label>Altura (m)<input name="altura" type="number" min="0.1" step="any" required></label></div><button type="submit">Calcular IMC</button></form>
+                <output class="resultado" aria-live="polite" hidden></output>
+            </section>
+
+            <section class="cartao">
+                <div class="cartao-topo"><span class="numero">03</span><span class="categoria">VEÍCULOS</span></div>
+                <h3>Calculadora de impostos</h3>
+                <p class="descricao">Carros fabricados antes de 1990 pagam 1%; a partir de 1990, 1,5% do valor de tabela.</p>
+                <form id="form3"><div class="campos"><label>Ano de fabricação<input name="ano" type="number" min="1886" max="2026" step="1" required></label><label>Valor de tabela (R$)<input name="valor" type="number" min="0.01" step="any" required></label></div><button type="submit">Calcular imposto</button></form>
+                <output class="resultado" aria-live="polite" hidden></output>
+            </section>
+
+            <section class="cartao">
+                <div class="cartao-topo"><span class="numero">04</span><span class="categoria">TRABALHO</span></div>
+                <h3>Calculadora de salário</h3>
+                <p class="descricao">Informe o salário e o código do cargo para calcular o reajuste.</p>
+                <div class="tabela-wrap"><table><thead><tr><th>Código</th><th>Cargo</th><th>Aumento</th></tr></thead><tbody><tr><td>101</td><td>Gerente</td><td>10%</td></tr><tr><td>102</td><td>Engenheiro</td><td>20%</td></tr><tr><td>103</td><td>Técnico</td><td>30%</td></tr><tr><td>Outro</td><td>Demais cargos</td><td>40%</td></tr></tbody></table></div>
+                <form id="form4"><div class="campos"><label>Salário atual (R$)<input name="salario" type="number" min="0.01" step="any" required></label><label>Código do cargo<input name="cargo" type="number" step="1" required></label></div><button type="submit">Calcular reajuste</button></form>
+                <output class="resultado" aria-live="polite" hidden></output>
+            </section>
+
+            <section class="cartao">
+                <div class="cartao-topo"><span class="numero">05</span><span class="categoria">FINANÇAS</span></div>
+                <h3>Crédito bancário</h3>
+                <p class="descricao">O crédito é calculado como percentual do saldo médio informado.</p>
+                <div class="tabela-wrap"><table><thead><tr><th>Saldo médio</th><th>Crédito</th></tr></thead><tbody><tr><td>Até R$ 200,00</td><td>Sem crédito</td></tr><tr><td>Acima de R$ 200 até R$ 400</td><td>20%</td></tr><tr><td>Acima de R$ 400 até R$ 600</td><td>30%</td></tr><tr><td>Acima de R$ 600</td><td>40%</td></tr></tbody></table></div>
+                <form id="form5"><div class="campos"><label>Saldo médio (R$)<input name="saldo" type="number" min="0" step="any" required></label></div><button type="submit">Calcular crédito</button></form>
+                <output class="resultado" aria-live="polite" hidden></output>
+            </section>
+
+            <section class="cartao">
+                <div class="cartao-topo"><span class="numero">06</span><span class="categoria">LANCHONETE</span></div>
+                <h3>Pedido do cardápio</h3>
+                <p class="descricao">Digite o código do produto e a quantidade para calcular o total.</p>
+                <div class="tabela-wrap"><table><thead><tr><th>Código</th><th>Produto</th><th>Preço</th></tr></thead><tbody><tr><td>1</td><td>Cachorro quente</td><td>R$ 11,00</td></tr><tr><td>2</td><td>Bauru</td><td>R$ 8,50</td></tr><tr><td>3</td><td>Misto quente</td><td>R$ 8,00</td></tr><tr><td>4</td><td>Hambúrguer</td><td>R$ 9,00</td></tr><tr><td>5</td><td>Cheeseburger</td><td>R$ 10,00</td></tr><tr><td>6</td><td>Refrigerante</td><td>R$ 4,50</td></tr></tbody></table></div>
+                <form id="form6"><div class="campos"><label>Código do item<input name="codigo" type="number" min="1" max="6" step="1" required></label><label>Quantidade<input name="quantidade" type="number" min="1" step="1" required></label></div><button type="submit">Calcular pedido</button></form>
+                <output class="resultado" aria-live="polite" hidden></output>
+            </section>
+
+            <section class="cartao">
+                <div class="cartao-topo"><span class="numero">07</span><span class="categoria">PAGAMENTO</span></div>
+                <h3>Sistema de vendas</h3>
+                <p class="descricao">Escolha a condição de pagamento para ver o valor final do produto.</p>
+                <div class="tabela-wrap"><table><thead><tr><th>Código</th><th>Condição</th><th>Regra</th></tr></thead><tbody><tr><td>A</td><td>Dinheiro ou cheque</td><td>10% de desconto</td></tr><tr><td>B</td><td>Cartão à vista</td><td>15% de desconto</td></tr><tr><td>C</td><td>Duas vezes</td><td>Sem juros</td></tr><tr><td>D</td><td>Duas vezes</td><td>10% de juros</td></tr></tbody></table></div>
+                <form id="form7"><div class="campos"><label>Preço de etiqueta (R$)<input name="preco" type="number" min="0.01" step="any" required></label><label>Condição<select name="condicao" required><option value="">Selecione</option><option value="a">A · Dinheiro ou cheque</option><option value="b">B · Cartão à vista</option><option value="c">C · Duas vezes sem juros</option><option value="d">D · Duas vezes com juros</option></select></label></div><button type="submit">Calcular valor</button></form>
+                <output class="resultado" aria-live="polite" hidden></output>
+            </section>
+
+            <section class="cartao">
+                <div class="cartao-topo"><span class="numero">08</span><span class="categoria">EDUCAÇÃO</span></div>
+                <h3>Pagamento de professores</h3>
+                <p class="descricao">Salário mensal = valor da hora/aula × aulas semanais × 4,5.</p>
+                <div class="tabela-wrap"><table><thead><tr><th>Nível</th><th>Valor por hora/aula</th></tr></thead><tbody><tr><td>1</td><td>R$ 12,00</td></tr><tr><td>2</td><td>R$ 17,00</td></tr><tr><td>3</td><td>R$ 25,00</td></tr></tbody></table></div>
+                <form id="form8"><div class="campos"><label>Nível<select name="nivel" required><option value="">Selecione</option><option value="1">Nível 1</option><option value="2">Nível 2</option><option value="3">Nível 3</option></select></label><label>Horas/aula por semana<input name="horas" type="number" min="0.1" step="any" required></label></div><button type="submit">Calcular salário</button></form>
+                <output class="resultado" aria-live="polite" hidden></output>
+            </section>
+        </div>
+    </main>
+
+    <footer><span>Desenvolvimento Web</span><span>Trabalho do 2º Bimestre · 2026</span></footer>
+</body>
+</html>
